@@ -45,4 +45,10 @@ public class AvionController {
         }
 
     }
+
+    public void readById(){
+
+        int idParaBuscar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Id a buscar: "));
+
+    }
 }

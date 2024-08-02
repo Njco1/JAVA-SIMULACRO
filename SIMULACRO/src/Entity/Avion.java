@@ -13,6 +13,12 @@ public class Avion {
         this.capacidad = capacidad;
     }
 
+    public Avion(int id, String modelo, int capacidad){
+        this.id = id;
+        this.modelo = modelo;
+        this.capacidad = capacidad;
+    }
+
     public int getId() {
         return id;
     }

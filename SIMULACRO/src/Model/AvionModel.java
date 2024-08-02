@@ -105,6 +105,8 @@ public class AvionModel implements CRUD {
 
         Connection connection = ConfigDB.openConnection();
 
+        Avion avion = null;
+
         try{
 
             String sqlQuery = "SELECT * FROM Avion WHERE id = ?;";
@@ -121,6 +123,14 @@ public class AvionModel implements CRUD {
                 avion = new Avion(id, modelo, capacidad);
             }
 
+        }catch(SQLException e){
+            System.out.println("ERROR: No se pudo consultar el avion: ");
+        }
+
+        try{
+            ConfigDB.closeConnection();
+        }catch(SQLException e){
+            throw new RuntimeException(e);
         }
         return null;
     }
